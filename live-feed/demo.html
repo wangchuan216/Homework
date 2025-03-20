@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时数据流示例</title>
+    
+    <!-- 引入自定义组件 -->
+    <script src="live-feed.js" defer></script>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* 样式容器 */
+.live-feed-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 卡片样式 */
+.live-feed-card {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    overflow: hidden;
+    text-align: left;
+    color: #444;
+}
+
+/* 悬停效果 */
+.live-feed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 卡片标题样式 */
+.live-feed-card h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* 卡片内容样式 */
+.live-feed-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* 列表项的样式 */
+.live-feed-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.live-feed-card ul li {
+    font-size: 14px;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+/* 链接样式 */
+.live-feed-card ul li a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.live-feed-card ul li a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2>实时数据流示例</h2>
+
+    <!-- 使用自定义的 live-feed 标签来展示实时数据 -->
+    <live-feed source="https://example.com/api/live" 
+               type="weather" 
+               refresh-interval="15" 
+               display="card"></live-feed>
+
+    <live-feed source="https://example.com/api/live" 
+               type="news" 
+               refresh-interval="15" 
+               display="card"></live-feed>
+
+    <live-feed source="https://example.com/api/live" 
+               type="sensor" 
+               refresh-interval="15" 
+               display="card"></live-feed>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>线上会议</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 会议选项卡 -->
+  <div id="meetingOptions">
+    <h2>会议详情</h2>
+    <div class="meeting-info">
+      <p><strong>会议 ID:</strong> <span id="roomId">vr123</span></p>
+      <p><strong>主持人:</strong> <span id="hostName">Xingyu</span></p>
+      <p><strong>最大参与人数:</strong> <span id="maxParticipants">2</span></p>
+    </div>
+    <button id="joinMeeting">📢 加入会议</button>
+  </div>
+
+  <!-- 选择加入方式 -->
+  <div id="joinOptions" class="hidden">
+    <h2>选择加入方式</h2>
+    <label>
+      <input type="checkbox" id="enableMic" checked> 开启麦克风
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="videoOption" value="none" checked> 无视频
+    </label>
+    <label>
+      <input type="radio" name="videoOption" value="camera"> 使用摄像头
+    </label>
+    <label>
+      <input type="radio" name="videoOption" value="screen"> 共享屏幕
+    </label>
+    <br>
+    <button id="startMeeting">✅ 进入会议</button>
+  </div>
+
+  <!-- 会议界面 -->
+  <div id="meetingRoom" class="hidden">
+    <h2>线上会议</h2>
+    <div id="videos">
+      <video id="localVideo" autoplay muted></video>
+      <video id="remoteVideo" autoplay></video>
+    </div>
+    <button id="exitCall">❌ 退出会议</button>-
+    <button id="toggleMedia">🔄 切换摄像头/屏幕</button>
+    <!-- 麦克风开关按钮 -->
+    <button id="toggleMic">🔇 开关麦克风</button>
+  </div>
+
+  <script src="./vr-meet.js"></script>
+
+
+</body>
+</html>

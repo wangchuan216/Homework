@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化示例</title>
+    
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- 引入自定义组件 -->
+    <script src="date-visual.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        data-visual {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>数据可视化示例</h2>
+
+    <!-- 折线图示例 -->
+    <data-visual type="line" data="[5, 10, 15, 20, 25]" 
+                 options='{"backgroundColor": "rgba(255, 99, 132, 0.5)", "borderColor": "rgba(255, 99, 132, 1)"}'>
+    </data-visual>
+
+    <!-- 柱状图示例 -->
+    <data-visual type="bar" data="[10, 20, 30, 40]" 
+                 options='{"backgroundColor": "rgba(54, 162, 235, 0.5)", "borderColor": "rgba(54, 162, 235, 1)"}'>
+    </data-visual>
+
+    <!-- 饼图示例 -->
+    <data-visual type="pie" data="[30, 60, 10]" 
+                 options='{"backgroundColor": ["#FF5733", "#33FF57", "#3357FF"]}'>
+    </data-visual>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* 全局样式 */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* 会议选项卡 */
+#meetingOptions {
+  width: 280px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+}
+
+.meeting-info {
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 会议加入选项 */
+#joinOptions {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+}
+
+/* 隐藏元素 */
+.hidden {
+  display: none;
+}
+
+/* 标题 */
+h2 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* 视频容器 */
+#videos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* 视频框 */
+video {
+  width: 40%;
+  max-width: 300px;
+  max-height: 180px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: black;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+video:hover {
+  transform: scale(1.05);
+}
+
+/* 按钮 */
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: #007BFF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* 退出按钮 */
+#exitCall {
+  background: #dc3545;
+}
+
+#exitCall:hover {
+  background: #b52a37;
+}
+
+/* 切换摄像头/屏幕 */
+#toggleMedia {
+  background: #28a745;
+}
+
+#toggleMedia:hover {
+  background: #1e7e34;
+}
+
+/* 麦克风按钮 */
+#toggleMic {
+  background: #f39c12;
+}
+
+#toggleMic:hover {
+  background: #e67e22;
+}
+
+/* 复选框 */
+label {
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  transform: scale(1.1);
+  cursor: pointer;
+}
